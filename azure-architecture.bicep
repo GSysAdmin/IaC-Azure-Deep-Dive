@@ -47,7 +47,7 @@ resource websiteSettings 'Microsoft.Web/sites/config@2023-12-01' = {
 
 var logAnalyticsWorkspaceName = enviromnmentName == 'prod' ? 'log-westeurope-prod-shared' : 'log-westeurope-test-shared'
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2023-09-01' existing = {
-  scope: resourceGroup(subscription().subscriptionId, 'rg-westeurope-test-shared ')
+  scope: resourceGroup(subscription().subscriptionId, 'rg-westeurope-test-shared')
   name: logAnalyticsWorkspaceName
 }
 
